@@ -1,0 +1,27 @@
+<DOCTYPE! html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="wordapp.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular.min.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+	<title>MY COMPUTER SINGS</title>
+</head>
+	
+
+<body ng-app ="myModule" ng-controller="myCtrl">
+	<h1>{{Heading}}</h1>
+
+	<div class="container">
+		<button class="btn btn-primary btn-lg" ng-Click="talk()">MY COMPUTER SINGS</button>
+	</div>
+
+	<div class="list of words"> 
+		<span ng-repeat="element in wordsOnPage track by $index" class="ng-class : {{element.decor}}"> {{element.word}} </span>
+	</div>
+
+
+
+<script type="text/javascript" src="wordapp.js"></script>
+</body>
+</html>
